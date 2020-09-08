@@ -49,7 +49,7 @@ public class InMemoryCinemaPersistence implements CinemaPersitence {
         functions2.add(funct4);
         
         Cinema c = new Cinema("cinemaX",functions);
-        Cinema c2 = new Cinema("Cine Colombia",functions2);
+        Cinema c2 = new Cinema("CineColombia",functions2);
         
         cinemas.put("cinemaX", c);
         cinemas.put("CineColombia", c2);
@@ -72,7 +72,7 @@ public class InMemoryCinemaPersistence implements CinemaPersitence {
 		Cinema cin = getCinema(cinema);
 		List<CinemaFunction> func = cin.getFunctions();
 		for (int i = 0; i < func.size(); i++) {
-			if (func.get(i).getDate() == date) {
+			if (func.get(i).getDate().equals(date)) {
 				functionss.add(func.get(i));
 			}
 		}
@@ -108,7 +108,7 @@ public class InMemoryCinemaPersistence implements CinemaPersitence {
 		List<CinemaFunction> functions = cin.getFunctions();	
 		for (int i = 0; i < functions.size(); i++) {
 			CinemaFunction fun = functions.get(i);
-			if (fun.getDate() == date && fun.getMovie().getName() == moviename) {
+			if (fun.getDate().equals(date) && fun.getMovie().getName().equals(moviename)) {
 				function = fun;
 			}
 		}
