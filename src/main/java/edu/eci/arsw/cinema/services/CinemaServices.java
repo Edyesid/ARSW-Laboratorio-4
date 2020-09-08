@@ -83,5 +83,23 @@ public class CinemaServices {
             throw new CinemaException(e.getMessage());
         }
     }
+    
+    public void NewFunction(String name, CinemaFunction funcion) throws CinemaPersistenceException, CinemaException {
+		try{
+            cps.NewFunction(name,funcion);
+        }catch(CinemaPersistenceException e){
+            throw new CinemaException(e.getMessage());
+        }
+	}
+    
+    public void SetFunction(String name, CinemaFunction funcion) throws CinemaPersistenceException, CinemaException {
+		try{
+            cps.SetFunction(name,funcion);
+        }catch(CinemaPersistenceException e){
+            throw new CinemaException(e.getMessage());
+        }
+	}
+    
+    
 
 }

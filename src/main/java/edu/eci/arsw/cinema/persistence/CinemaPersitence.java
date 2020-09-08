@@ -57,5 +57,9 @@ public interface CinemaPersitence {
 	Set<Cinema> getAllCinemas() throws CinemaPersistenceException;
 
 	public CinemaFunction getFunctionByCinemaDateMovie(String cinema, String date, String moviename) throws CinemaPersistenceException;
+
+	public void NewFunction(String name, CinemaFunction funcion) throws CinemaPersistenceException;
+
+	public void SetFunction(String name, CinemaFunction funct) throws CinemaPersistenceException;
     
 }

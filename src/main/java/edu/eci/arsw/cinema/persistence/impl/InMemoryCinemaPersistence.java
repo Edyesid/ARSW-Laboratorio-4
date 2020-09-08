@@ -114,4 +114,24 @@ public class InMemoryCinemaPersistence implements CinemaPersitence {
 		}
 		return function;
 	}
+	
+	@Override
+	public void NewFunction(String name, CinemaFunction funcion) throws CinemaPersistenceException {
+		Cinema cinema = getCinema(name);
+		cinema.getFunctions().add(funcion);
+	}
+	
+	@Override
+	public void SetFunction(String name, CinemaFunction funct) throws CinemaPersistenceException {
+		Cinema cinema = getCinema(name);
+		List<CinemaFunction> cinemas = cinema.getFunctions();
+		for(CinemaFunction funcion:cinemas) {
+			if(funcion.getMovie().getName().equals(funct.getMovie().getName())) {
+				funcion.setDate(funct.getDate());
+				funcion.setMovie(funct.getMovie());
+				funcion.setSeats(funct.getSeats());
+				}
+			
+		}
+	}
 }

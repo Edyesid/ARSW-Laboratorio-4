@@ -96,16 +96,28 @@ public class CinemaAPIController {
     	}
     }
     
-    /***@RequestMapping(method = RequestMethod.POST)	
-    public ResponseEntity<?> manejadorPostRecursoname(@RequestBody String name){
+    @RequestMapping(value="/{name}", method = RequestMethod.POST)	
+    public ResponseEntity<?> manejadorPostRecursoName(@RequestBody CinemaFunction funcion,@PathVariable("name") String name) throws CinemaPersistenceException{
         try {
-            
+            csp.NewFunction(name, funcion);
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch (CinemaException ex) {
             Logger.getLogger(CinemaAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("Error bla bla bla",HttpStatus.FORBIDDEN);            
         }        
 
-    }***/
+    }
+    
+    @RequestMapping(value="/{name}", method = RequestMethod.PUT)	
+    public ResponseEntity<?> manejadorPutRecursoName(@RequestBody CinemaFunction funcion,@PathVariable("name") String name) throws CinemaPersistenceException{
+        try {
+            csp.SetFunction(name, funcion);
+            return new ResponseEntity<>(HttpStatus.UPGRADE_REQUIRED);
+        } catch (CinemaException ex) {
+            Logger.getLogger(CinemaAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>("Error bla bla bla",HttpStatus.FORBIDDEN);            
+        }        
+
+    }
     
 }
