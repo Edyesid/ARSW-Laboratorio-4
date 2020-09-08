@@ -75,6 +75,13 @@ public class CinemaServices {
             throw new CinemaException(e.getMessage());
         }
     }
-
+    
+    public CinemaFunction getFunctionByCinemaDateMovie(String cinema, String date, String moviename) throws CinemaException {
+        try{
+            return cps.getFunctionByCinemaDateMovie(cinema,date,moviename);
+        }catch(CinemaPersistenceException e){
+            throw new CinemaException(e.getMessage());
+        }
+    }
 
 }

@@ -35,18 +35,19 @@ public class Main {
         
         //consult cinemas
         System.out.println("-------------cinemas------------------");
+        System.out.println(cf.getAllCinemas());
         
         for (Cinema cadena : cf.getAllCinemas()) {
         	 System.out.println(cadena.getName());
         }
         
-        List<CinemaFunction> funciones = cf.getFunctionsbyCinemaAndDate("cinemaX", "2018-12-18 15:30");
+        CinemaFunction funcion = cf.getFunctionByCinemaDateMovie("cinemaX", "2018-12-18","SuperHeroes Movie");
+        System.out.println("--------------funcion-----------");
+        System.out.println(funcion);
         
-        System.out.println("-------------peliculas de autoCine en la fecha 2020-12-19 13:00------------------");
-        
-        for (CinemaFunction funcion : funciones) {
-        	System.out.println(funcion.getMovie().getName());
-        }
+
+        System.out.println(funcion.getMovie().getName());
+   
         
         System.out.println("-------------comprar boleto------------------");
         

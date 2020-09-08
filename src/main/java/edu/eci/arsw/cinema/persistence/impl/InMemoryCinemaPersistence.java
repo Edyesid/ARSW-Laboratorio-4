@@ -30,8 +30,8 @@ public class InMemoryCinemaPersistence implements CinemaPersitence {
     private final Map<String,Cinema> cinemas=new HashMap<>();
 
     public InMemoryCinemaPersistence() {
-        String functionDate = "2018-12-18 15:30";
-        String functionDate2 = "2019-12-18 14:00";
+        String functionDate = "2018-12-18";
+        String functionDate2 = "2019-12-18";
         
         List<CinemaFunction> functions= new ArrayList<>();
         List<CinemaFunction> functions2= new ArrayList<>();
@@ -100,4 +100,18 @@ public class InMemoryCinemaPersistence implements CinemaPersitence {
     	Set<Cinema> list = new HashSet(cinemas.values());
     	return list;
     }
+
+	@Override
+	public CinemaFunction getFunctionByCinemaDateMovie(String name, String date, String moviename) throws CinemaPersistenceException {
+		CinemaFunction function = null; 
+		Cinema cin = getCinema(name);
+		List<CinemaFunction> functions = cin.getFunctions();	
+		for (int i = 0; i < functions.size(); i++) {
+			CinemaFunction fun = functions.get(i);
+			if (fun.getDate() == date && fun.getMovie().getName() == moviename) {
+				function = fun;
+			}
+		}
+		return function;
+	}
 }
