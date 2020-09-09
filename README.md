@@ -36,23 +36,31 @@ Del anterior diagrama de componentes (de alto nivel), se desprendió el siguient
 
 ![spring](img/spring.png)
 
+![cinemas](img/cinemas.png)
+
 ![json](img/json.png)
 
 5. Modifique el controlador para que ahora, acepte peticiones GET al recurso /cinemas/{name}, el cual retorne usando una representación jSON todas las funciones del cine cuyo nombre sea {name}. Si no existe dicho cine, se debe responder con el código de error HTTP 404. Para esto, revise en la documentación de Spring, sección 22.3.2, el uso de @PathVariable. De nuevo, verifique que al hacer una petición GET -por ejemplo- a recurso http://localhost:8080/cinemas/cinemaY , se obtenga en formato jSON el conjunto de funciones asociadas al cine 'cinemaY' (ajuste esto a los nombres de cine usados en el punto 2).
 
 ![cineColombia](img/cineColombia.png)
 
+![cinemaX](img/cinema1.png)
+
 ![cinemaX](img/cinemaX.png)
-
-
 
 6. Modifique el controlador para que ahora, acepte peticiones GET al recurso /cinemas/{name}/{date}, el cual retorne usando una representación jSON una lista de funciones asociadas al cine cuyo nombre es {name} y cuya fecha sea {date}, para mayor facilidad se seguirá manejando el formato "yyyy-MM-dd". De nuevo, si no existen dichas funciones, se debe responder con el código de error HTTP 404.
 
 ![date2](img/date2.png)
 
+![fecha](img/fecha.png)
+
 ![date](img/date.png)
 
 7. Modifique el controlador para que ahora, acepte peticiones GET al recurso /cinemas/{name}/{date}/{moviename}, el cual retorne usando una representación jSON sólo UNA función, en este caso es necesario detallar además de la fecha, la hora exacta de la función de la forma "yyyy-MM-dd HH:mm". Si no existe dicha función, se debe responder con el código de error HTTP 404.
+
+![super1](img/super1.png)
+
+![super](img/super.png)
 
 ## Parte II
 
