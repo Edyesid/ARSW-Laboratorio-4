@@ -1,4 +1,14 @@
 # ARSW - Laboratorio - 4
+
+Comandos para ejecutar la aplicación
+
+´´´
+mvn clean compile
+´´´
+
+´´´
+mvn spring-boot:run
+´´´
  
 ## Descripción 
 
