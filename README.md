@@ -80,10 +80,15 @@ Del anterior diagrama de componentes (de alto nivel), se desprendió el siguient
 
 2. Para probar que el recurso ‘cinemas’ acepta e interpreta correctamente las peticiones POST, use el comando curl de Unix. Este comando tiene como parámetro el tipo de contenido manejado (en este caso jSON), y el ‘cuerpo del mensaje’ que irá con la petición, lo cual en este caso debe ser un documento jSON equivalente a la clase Cliente (donde en lugar de {ObjetoJSON}, se usará un objeto jSON correspondiente a una nueva función: (ver code 4) Con lo anterior, registre un nueva función (para 'diseñar' un objeto jSON, puede usar esta herramienta): Nota: puede basarse en el formato jSON mostrado en el navegador al consultar una función con el método GET.
 
+![parte 2 punto 2](https://user-images.githubusercontent.com/54051399/92559153-a560e280-f235-11ea-8ad7-d77e436649d2.png)
 
 3. Teniendo en cuenta el nombre del cine, la fecha y hora de la función y el nombre de la película, verifique que el mismo se pueda obtener mediante una petición GET al recurso '/cinemas/{name}/{date}/{moviename}' correspondiente.
 
+![parte 2 punto 3](https://user-images.githubusercontent.com/54051399/92559158-a6920f80-f235-11ea-9d96-8b29dd6977a7.png)
+
 4. Agregue soporte al verbo PUT para los recursos de la forma '/cinemas/{name}', de manera que sea posible actualizar una función determinada, el servidor se encarga de encontrar la función correspondiente y actualizarla o crearla.
+
+![parte 2 punto 4](https://user-images.githubusercontent.com/54051399/92559163-a7c33c80-f235-11ea-8165-a32194e52ae5.png)
 
 ## Parte III
 
