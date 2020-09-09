@@ -1,0 +1,19 @@
+1. ¿Que condiciones de carrera se podrian presentar?
+
+* Al crear nuevas funciones/cinemas mientras tambien se consulta alguna
+* se puede presentar al consultar/cinema una funcion mientras esta al mismo tiempo se modifica
+* Comprar al mismo tiempo el tickete de un mismo lugar
+
+2. Cuales son las respectivas regiones críticas?
+
+* lista de funciones 
+* lista de cinemas
+* lista de asientos
+
+3. solucion
+
+* Hacer uso de las colecciones concurrentes que tiene java como java.util.concurrent.CopyOnWriteArrayList para 
+la lista de funciones y java.util.concurrent.ConcurrentHashMap para el set de cinema
+
+
+
