@@ -44,7 +44,7 @@ Del anterior diagrama de componentes (de alto nivel), se desprendió el siguient
 
 ![cineColombia](img/cineColombia.png)
 
-![cinemaX](img/cinema1.png)
+![cinemaX1](img/cinemaX1.png)
 
 ![cinemaX](img/cinemaX.png)
 
